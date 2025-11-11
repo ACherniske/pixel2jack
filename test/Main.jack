@@ -1,0 +1,28 @@
+/**
+ * Main.jack
+ * Demonstrates the generated Test pixel art class
+ * Draws the image centered on the screen
+ */
+
+class Main {
+
+    function void main() {
+        var int offsetX, offsetY;
+
+        //clear screen
+        do Screen.clearScreen();
+
+        let offsetX = 0;   //left edge
+        let offsetY = 0;   //top edge
+
+        //draw the pixel art
+        do Test.draw(offsetX, offsetY);
+
+        //wait forever so it stays visible
+        while (true) {
+            do Sys.wait(10000);
+        }
+
+        return;
+    }
+}
